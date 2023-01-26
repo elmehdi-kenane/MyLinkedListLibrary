@@ -6,7 +6,7 @@
 /*   By: ekenane <ekenane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/25 23:43:50 by ekenane           #+#    #+#             */
-/*   Updated: 2023/01/26 02:58:24 by ekenane          ###   ########.fr       */
+/*   Updated: 2023/01/26 03:07:51 by ekenane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ Node *addnode_at_head(Node *head, int value)
 	    new_node = calloc(1, sizeof(Node));
         if (!new_node)
         {
-            printf("\033[37;41the node has not added!!!\033[0m\n");
+            printf("\033[37;41the node has not added!!\033[0m\n");
             return(NULL);
         }
         new_node->value = value;
