@@ -6,7 +6,7 @@
 /*   By: ekenane <ekenane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/25 23:43:50 by ekenane           #+#    #+#             */
-/*   Updated: 2023/01/26 09:32:20 by ekenane          ###   ########.fr       */
+/*   Updated: 2023/01/26 09:34:45 by ekenane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,9 @@ Node *addnode_at_value(Node *head, int after_value, int new_value)
     Node *new_node;
     Node *current;
     Node *tmp;
+    int  i;
 
+    i = 0;
     current = head;
     if (head == NULL)
     {
@@ -29,6 +31,7 @@ Node *addnode_at_value(Node *head, int after_value, int new_value)
         tmp = current->next;
         if (after_value == current->value)
         {
+            i = 1;
             new_node = calloc(1, sizeof(Node));
             if (!new_node)
             {

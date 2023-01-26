@@ -6,7 +6,7 @@
 /*   By: ekenane <ekenane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/25 23:43:50 by ekenane           #+#    #+#             */
-/*   Updated: 2023/01/26 09:31:41 by ekenane          ###   ########.fr       */
+/*   Updated: 2023/01/26 09:34:30 by ekenane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,7 @@ Node *addnode_at_tail(Node *head, int value)
             return(NULL);
         }
         while (current->next != NULL)
-        {
             current = current->next;
-            i++;
-        }
         new_node->index = current->index;
         current->next = new_node;
         new_node->index += 1;
