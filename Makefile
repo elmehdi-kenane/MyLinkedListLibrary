@@ -1,6 +1,8 @@
 VPATH = functions
 SRC = main.c print_list.c new_list.c addnode_at_head.c addnode_at_tail.c addnode_at_index.c addnode_at_value.c \
-	delete_via_value.c \
+	delete_via_value.c delete_via_index.c\
+	search_via_value.c\
+	length_list.c\
 
 OBJ = $(SRC:.c=.o)
 CC = gcc
@@ -19,6 +21,6 @@ $(PROGRAM): $(OBJ)
 clean:
 	rm -fr $(VPATH)/*.o
 fclean: clean
-	rm -fr $(VPATH)/$(PROGRAM)
+	rm -fr $(PROGRAM)
 
 re: fclean all
