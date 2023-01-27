@@ -6,7 +6,7 @@
 /*   By: ekenane <ekenane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/25 23:43:50 by ekenane           #+#    #+#             */
-/*   Updated: 2023/01/27 04:46:17 by ekenane          ###   ########.fr       */
+/*   Updated: 2023/01/27 08:14:53 by ekenane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ Node *delete_via_index(Node *head, int index)
         tmp = current->next;
         if (current->index == index)
         {
-            printf("\033[42m\033[97mthe node(head) with value |%d| is DELETED from the list!\033[0m\n", index);
+            printf("\033[42m\033[97mthe node(head) with index |%d| is DELETED from the list!\033[0m\n", index);
             while(current != NULL)
             {
                 current->index -= 1;
