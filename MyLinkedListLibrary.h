@@ -6,7 +6,7 @@
 /*   By: ekenane <ekenane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/25 23:43:50 by ekenane           #+#    #+#             */
-/*   Updated: 2023/01/28 23:08:48 by ekenane          ###   ########.fr       */
+/*   Updated: 2023/01/28 23:24:35 by ekenane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ Node *delete_duplicates(Node *head, int value);
 void search_via_value(Node *head, int value);
 void replace_value(Node *head, int value, int new_value, int times);
 Node *append_lists(Node *head_list1, Node *head_list2);
+Node *reverse_list(Node *head);
 int length_list(Node *head);
 void print_list(Node *head);
 
