@@ -6,7 +6,7 @@
 /*   By: ekenane <ekenane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/25 23:43:50 by ekenane           #+#    #+#             */
-/*   Updated: 2023/01/26 09:32:35 by ekenane          ###   ########.fr       */
+/*   Updated: 2023/01/28 15:47:09 by ekenane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ void print_list(Node *head)
 
     if (head == NULL)
         printf("\033[37;41mthe list is EMPTY!!!\033[0m\n");
-	current = head;
-	if (head != NULL)
+	else
 		printf("\033[90mthe nodes of the list..\n\033[0m");
+	current = head;
 	i = 1;
     while (current != NULL)
     {
@@ -37,7 +37,4 @@ void print_list(Node *head)
 		current = current->next;
 		i++;
     }
-	
-    
-
 }
