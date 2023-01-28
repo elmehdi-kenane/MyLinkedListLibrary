@@ -1,7 +1,7 @@
 VPATH = functions
 SRC = main.c print_list.c new_list.c addnode_at_head.c addnode_at_tail.c addnode_at_index.c addnode_at_value.c \
-	delete_via_value.c delete_via_index.c\
-	search_via_value.c\
+	delete_via_value.c delete_via_index.c delete_duplicates.c\
+	search_via_value.c replace_value.c\
 	length_list.c\
 
 OBJ = $(SRC:.c=.o)
