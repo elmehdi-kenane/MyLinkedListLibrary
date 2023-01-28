@@ -6,13 +6,13 @@
 /*   By: ekenane <ekenane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/25 23:43:50 by ekenane           #+#    #+#             */
-/*   Updated: 2023/01/27 06:10:58 by ekenane          ###   ########.fr       */
+/*   Updated: 2023/01/28 22:15:47 by ekenane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../MyLinkedListLibrary.h"
 
-void length_list(Node *head)
+int length_list(Node *head)
 {
     int  count;
     Node *current;
@@ -21,6 +21,7 @@ void length_list(Node *head)
     if (head == NULL)
     {
         printf("\033[37;41mthe list is EMPTY!!!\033[0m\n");
+        return (NULL);
     }
     current = head;
     while(current != NULL)
@@ -29,4 +30,5 @@ void length_list(Node *head)
         current = current->next;
     }
     printf("\033[48;5;8mthere is %d node(s) in this list.\033[0m\n", count);
+    return (count);
 }
