@@ -6,7 +6,7 @@
 /*   By: ekenane <ekenane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/25 23:43:50 by ekenane           #+#    #+#             */
-/*   Updated: 2023/01/28 22:15:47 by ekenane          ###   ########.fr       */
+/*   Updated: 2023/01/28 23:02:06 by ekenane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int length_list(Node *head)
     if (head == NULL)
     {
         printf("\033[37;41mthe list is EMPTY!!!\033[0m\n");
-        return (NULL);
+        return (0);
     }
     current = head;
     while(current != NULL)
