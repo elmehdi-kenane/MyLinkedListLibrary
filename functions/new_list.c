@@ -6,7 +6,7 @@
 /*   By: ekenane <ekenane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/25 23:43:50 by ekenane           #+#    #+#             */
-/*   Updated: 2023/01/26 05:34:58 by ekenane          ###   ########.fr       */
+/*   Updated: 2023/01/30 21:19:36 by ekenane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,6 @@ Node *new_list(int value)
     head->index = 1;
 	head->value = value;
 	head->next = NULL;
-    printf("\033[42m\033[97mList created with SUCCESS!\033[0m\n");
+    printf("\033[42m\033[97mthe first node with the |%d| value & List created with SUCCESS!\033[0m\n", value);
 	return (head);
 }
