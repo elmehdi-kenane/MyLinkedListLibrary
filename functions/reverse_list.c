@@ -6,7 +6,7 @@
 /*   By: ekenane <ekenane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/25 23:43:50 by ekenane           #+#    #+#             */
-/*   Updated: 2023/01/29 00:10:20 by ekenane          ###   ########.fr       */
+/*   Updated: 2023/01/31 10:02:20 by ekenane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ Node *reverse_list(Node *head)
 {
     Node *previous;
     Node *current;
-    Node *tmp;
+    Node *tmp_next;
     
     if (head == NULL)
     {
@@ -33,10 +33,22 @@ Node *reverse_list(Node *head)
     previous->next = NULL;
     while(current != NULL)
     {
-        tmp = current->next;
+        tmp_next = current->next;
         current->next = previous;
         previous = current;
-        current = tmp;
+        current = tmp_next;
     }
+    current = previous;
+    while(current != NULL)
+    {
+        current->index = 1;
+        current = current->next;
+    }
+    current = previous;
+    while(current->next != NULL)
+    {
+        current->next->index = (current->index + 1);
+        current = current->next;
+    }    
     return (previous);
 }
