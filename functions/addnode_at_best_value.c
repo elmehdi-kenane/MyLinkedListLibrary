@@ -6,7 +6,7 @@
 /*   By: ekenane <ekenane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/25 23:43:50 by ekenane           #+#    #+#             */
-/*   Updated: 2023/01/31 10:52:00 by ekenane          ###   ########.fr       */
+/*   Updated: 2023/01/31 11:51:03 by ekenane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,12 @@ Node *addnode_at_best_value(Node *head, int value)
     printf("\033[33mNOTE: the list should be already sorted ascending (ex. 1 --> 9)!\033[0m\n");
     while (current != NULL)
     {
-        if (current->value > value)
+        if (current == head && current->value > value)
+        {
+            head = addnode_at_index(head, current->index, value);
+            return (head);
+        }
+        else if (current->value > value)
         {
             head = addnode_at_index(head, (current->index - 1), value);
             return (head);

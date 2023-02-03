@@ -6,7 +6,7 @@
 /*   By: ekenane <ekenane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/25 23:43:50 by ekenane           #+#    #+#             */
-/*   Updated: 2023/01/31 06:23:49 by ekenane          ###   ########.fr       */
+/*   Updated: 2023/01/31 11:48:36 by ekenane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ Node *sort_list(Node *head)
         node2 = head;
         while(node2->next != NULL)
         {
-            if (node2->value > node2->next->value)
+            if (node2->value < node2->next->value)
             {
                 check = 1;
                 tmp = node2->next->value;

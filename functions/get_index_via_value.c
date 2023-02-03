@@ -1,45 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   addnode_at_head.c                                  :+:      :+:    :+:   */
+/*   get_index_via_value.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ekenane <ekenane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/25 23:43:50 by ekenane           #+#    #+#             */
-/*   Updated: 2023/01/31 19:02:22 by ekenane          ###   ########.fr       */
+/*   Updated: 2023/01/31 11:16:37 by ekenane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../MyLinkedListLibrary.h"
 
-Node *addnode_at_head(Node *head, int value)
+int get_index_via_value(Node *head, int value)
 {
-    Node *new_node;
-    Node *tmp;
+    Node *current;
 
     if (head == NULL)
     {
         printf("\033[37;41mthe list is EMPTY!!!\033[0m\n");
-        return (NULL);
+        return (0);
     }
-    else
+    current = head;
+    while (current != NULL)
     {
-	    new_node = calloc(1, sizeof(Node));
-        if (!new_node)
+        if (current->value == value)
         {
-            printf("\033[37;41the node has not added!!\033[0m\n");
-            return(NULL);
+            printf("\033[42m\033[97mthe node of the |%d| value ==> index |%d|\033[0m\n", current->value, current->index);
+            return (current->index);
         }
-        new_node->value = value;
-        new_node->next = head;
-        new_node->index = 1;
-        tmp = new_node;
-        while (tmp->next != NULL)
+        else if (current->next == NULL)
         {
-            tmp = tmp->next;
-            tmp->index += 1;
+            printf("\033[37;41mthere is no NODE with the |%d| value in the list!!!\033[0m\n", value);
+            return (current->index);
         }
-        printf("\033[42m\033[97mthe node with value |%d| is added in the head of list!\033[0m\n", value);
+        current = current->next;
     }
-    return (new_node);
+    return (current->index);
 }
