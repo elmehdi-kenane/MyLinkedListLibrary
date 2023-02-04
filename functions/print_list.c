@@ -6,7 +6,7 @@
 /*   By: ekenane <ekenane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/25 23:43:50 by ekenane           #+#    #+#             */
-/*   Updated: 2023/01/28 16:07:17 by ekenane          ###   ########.fr       */
+/*   Updated: 2023/02/04 04:30:18 by ekenane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,11 +30,11 @@ void print_list(Node *head)
 		else if (current->next == NULL)
         {
         	printf("last node = %d == index = %d\n", current->value, current->index);
-	        printf("\033[90mthe end of the list..\n\033[0m");
         }
 		else
         printf("node[%d] = %d == index = %d\n", i, current->value, current->index);
 		current = current->next;
 		i++;
     }
+	printf("\033[90mthe end of the list..\n\033[0m");
 }
