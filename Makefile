@@ -10,9 +10,9 @@ FLAGS = -Wall -Wextra -Werror
 PROGRAM = program
 
 all: $(PROGRAM)
-	@printf "\033[32m =================\033[0m\n"
-	@printf "\033[32m| Build complete! |\033[0m\n"
-	@printf "\033[32m =================\033[0m\n"
+	@printf "\033[32m ======================\033[0m\n"
+	@printf "\033[32m| The Build Completed! |\033[0m\n"
+	@printf "\033[32m ======================\033[0m\n"
 
 %.o: %.c MyLinkedListLibrary.h
 	$(CC) -c $< -o $(VPATH)/$@ $(FLAGS)
