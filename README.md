@@ -1,9 +1,9 @@
 # My Linked List Library
 
-##### Description 📄:
+- ##### Description 📄:
 My Linked List Library is a simple implementation of a singly linked list in C.
 
-##### Installation 🔰:
+- ##### Installation 🔰:
 1. Clone the repository: 
 ```sh
 git clone https://github.com/elmehdi-kenane/MyLinkedListLibrary.git
