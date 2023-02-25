@@ -6,7 +6,7 @@
 /*   By: ekenane <ekenane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/25 23:43:50 by ekenane           #+#    #+#             */
-/*   Updated: 2023/01/31 11:51:03 by ekenane          ###   ########.fr       */
+/*   Updated: 2023/02/25 19:03:58 by ekenane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ Node *addnode_at_best_value(Node *head, int value)
     current = head;
     if (head == NULL)
     {
-        printf("\033[37;41mthe list is EMPTY!!!\033[0m\n");
-        return (NULL);
+        head = new_list(value);
+        return (head);
     }
     if (head->next == NULL)
     {

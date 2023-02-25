@@ -6,7 +6,7 @@
 /*   By: ekenane <ekenane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/25 23:43:50 by ekenane           #+#    #+#             */
-/*   Updated: 2023/01/31 19:02:22 by ekenane          ###   ########.fr       */
+/*   Updated: 2023/02/25 19:04:05 by ekenane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ Node *addnode_at_head(Node *head, int value)
 
     if (head == NULL)
     {
-        printf("\033[37;41mthe list is EMPTY!!!\033[0m\n");
-        return (NULL);
+        head = new_list(value);
+        return (head);
     }
     else
     {

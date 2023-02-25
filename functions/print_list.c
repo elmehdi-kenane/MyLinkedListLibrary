@@ -6,7 +6,7 @@
 /*   By: ekenane <ekenane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/25 23:43:50 by ekenane           #+#    #+#             */
-/*   Updated: 2023/02/04 04:30:18 by ekenane          ###   ########.fr       */
+/*   Updated: 2023/02/25 18:40:22 by ekenane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,6 @@ void print_list(Node *head)
 		current = current->next;
 		i++;
     }
-	printf("\033[90mthe end of the list..\n\033[0m");
+    if (head)
+	    printf("\033[90mthe end of hhhthe list..\n\033[0m");
 }
