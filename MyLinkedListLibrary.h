@@ -6,7 +6,7 @@
 /*   By: ekenane <ekenane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/25 23:43:50 by ekenane           #+#    #+#             */
-/*   Updated: 2023/01/31 11:11:56 by ekenane          ###   ########.fr       */
+/*   Updated: 2023/02/25 19:47:09 by ekenane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 typedef struct node{
     int value;
     int index;
+    int rank;
     struct node *next;
 }Node;
 
@@ -45,5 +46,7 @@ Node *reverse_list(Node *head);
 Node *sort_list(Node *head);
 int length_list(Node *head);
 void print_list(Node *head);
+// ---------- set nodes ----------
+void	 index_nodes(Node **head);
 
 #endif

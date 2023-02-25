@@ -4,6 +4,7 @@ SRC = new_list.c addnode_at_head.c addnode_at_tail.c addnode_at_index.c addnode_
 	delete_via_value.c delete_via_index.c delete_duplicates.c \
 	search_via_value.c replace_value.c append_lists.c reverse_list.c sort_list.c get_index_via_value.c \
 	print_list.c length_list.c \
+	index_nodes.c \
 
 OBJ = $(SRC:.c=.o)
 CC = gcc
