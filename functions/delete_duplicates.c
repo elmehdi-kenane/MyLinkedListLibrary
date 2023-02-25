@@ -6,7 +6,7 @@
 /*   By: ekenane <ekenane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/25 23:43:50 by ekenane           #+#    #+#             */
-/*   Updated: 2023/01/28 18:37:45 by ekenane          ###   ########.fr       */
+/*   Updated: 2023/02/25 19:53:09 by ekenane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,8 +63,6 @@ Node *delete_duplicates(Node *head, int value)
         {
             printf("\033[42m\033[97mthe duplicate_node(%d) with value |%d| is DELETED from the list!\033[0m\n", duplicates, value);
             previous->next = current->next;
-            if (tmp)
-                tmp->index -= 1;
             duplicates++;
             free(current);
         }

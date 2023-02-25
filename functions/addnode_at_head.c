@@ -6,7 +6,7 @@
 /*   By: ekenane <ekenane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/25 23:43:50 by ekenane           #+#    #+#             */
-/*   Updated: 2023/02/25 19:04:05 by ekenane          ###   ########.fr       */
+/*   Updated: 2023/02/25 19:49:33 by ekenane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 Node *addnode_at_head(Node *head, int value)
 {
     Node *new_node;
-    Node *tmp;
 
     if (head == NULL)
     {
@@ -32,13 +31,6 @@ Node *addnode_at_head(Node *head, int value)
         }
         new_node->value = value;
         new_node->next = head;
-        new_node->index = 1;
-        tmp = new_node;
-        while (tmp->next != NULL)
-        {
-            tmp = tmp->next;
-            tmp->index += 1;
-        }
         printf("\033[42m\033[97mthe node with value |%d| is added in the head of list!\033[0m\n", value);
     }
     return (new_node);

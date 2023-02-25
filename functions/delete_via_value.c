@@ -6,7 +6,7 @@
 /*   By: ekenane <ekenane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/25 23:43:50 by ekenane           #+#    #+#             */
-/*   Updated: 2023/01/26 23:56:47 by ekenane          ###   ########.fr       */
+/*   Updated: 2023/02/25 22:26:41 by ekenane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,11 +49,6 @@ Node *delete_via_value(Node *head, int value)
             {
                 i = 1;
                 previous->next = tmp;
-                while(current != NULL)
-                {
-                    current->index -= 1;
-                    current = current->next;
-                }
                 free(current);
                 printf("\033[42m\033[97mthe node with value |%d| is DELETED from the list!\033[0m\n", value);
                 return(head);

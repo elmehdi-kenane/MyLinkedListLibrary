@@ -6,7 +6,7 @@
 /*   By: ekenane <ekenane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/25 23:43:50 by ekenane           #+#    #+#             */
-/*   Updated: 2023/02/25 19:04:12 by ekenane          ###   ########.fr       */
+/*   Updated: 2023/02/25 19:50:14 by ekenane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,14 +42,6 @@ Node *addnode_at_index(Node *head, int after_index, int value)
             new_node->index = (current->index + 1);
             current->next = new_node;
             new_node->next = tmp;
-            if (tmp)
-            {
-                while (tmp != NULL)
-                {
-                    tmp->index += 1;
-                    tmp = tmp->next;
-                }
-            }
             printf("\033[42m\033[97mthe node with value |%d| is added after the node of index |%d|\033[0m\n", new_node->value, after_index);
         }
         current = current->next;
