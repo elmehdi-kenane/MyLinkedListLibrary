@@ -1,4 +1,7 @@
 # My Linked List Library
+<h1 align="center" ><strong>my_42_cursus</strong></h1>
+![](https://img.shields.io/badge/ekenane-green?logo=42&style=for-the-badge&labelColor=black)
+
 ##### Description 📄:
 My Linked List Library is a simple implementation of a singly linked list in C.
 
